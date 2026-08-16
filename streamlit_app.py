@@ -11,7 +11,8 @@ if not hasattr(st, "login") or not hasattr(st, "user"):
 if not st.user.is_logged_in:
     st.title("Authentication Required")
     st.write("Please log in with your Google account to access the generator.")
-    st.button("Log in with Google", on_click=st.login)
+    st.button("Log in with Google", on_click=st.login("google"))
+#    st.button("Log in with Google", on_click=st.login)
     st.stop() # Stops the script here so the rest of the app doesn't render
 
 # --- 2. Authenticated App Logic ---
